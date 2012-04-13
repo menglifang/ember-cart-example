@@ -1,12 +1,10 @@
 # ReadMe
 
+ember-cart-example has an [online
+version](http://simple-lightning-5498.herokuapp.com). 
 
-## Deployment
+*NOTE* It hasn't finished yet.
 
-```
-ey deploy
-```
-Remove
 ## Thanks
 
 The original scaffold for this application was created by [App Scrolls](http://appscrolls.org).
