@@ -35,7 +35,10 @@ gem 'ember-rails', git: 'https://github.com/emberjs/ember-rails.git'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-gem "rspec-rails", :group => [:development, :test]
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'ffaker'
+end
 gem "simple_form"
 group :assets do
   gem "twitter-bootstrap-rails"
@@ -44,6 +47,5 @@ end
 gem 'ember-cart', git: 'https://github.com/ichid/ember-cart.git', branch: 'develop'
 gem 'ancestry'
 gem 'heroku'
-gem 'pg'
-
-gem 'ffaker', :group => :test
+gem 'slim'
+gem 'sqlite3'
