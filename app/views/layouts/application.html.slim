@@ -38,7 +38,7 @@ html lang="en"
             ul.nav.nav-list
               li.nav-header Product Categories
               - ProductCategory.all.each do |c|
-                li class="#{@product_category.name == c.name ? 'active' : ''}"= link_to c.name, product_category_products_path(c)
+                li class="#{@product_category.name == c.name ? 'active' : '' if @product_category}"= link_to c.name, product_category_products_path(c)
           /! /.well
         /! /span
         .span9
