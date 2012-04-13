@@ -43,3 +43,6 @@ gem "sqlite3", :group => [:development, :test]
 group :assets do
   gem "twitter-bootstrap-rails"
 end
+
+gem 'ember-cart', git: 'https://github.com/ichid/ember-cart.git', branch: 'develop'
+gem 'ancestry'
