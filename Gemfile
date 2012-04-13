@@ -48,4 +48,5 @@ gem 'ember-cart', git: 'https://github.com/ichid/ember-cart.git', branch: 'devel
 gem 'ancestry'
 gem 'heroku'
 gem 'slim'
-gem 'sqlite3'
+#gem 'sqlite3'
+gem 'pg'
