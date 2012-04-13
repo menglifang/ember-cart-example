@@ -45,3 +45,5 @@ gem 'ember-cart', git: 'https://github.com/ichid/ember-cart.git', branch: 'devel
 gem 'ancestry'
 gem 'heroku'
 gem 'pg'
+
+gem 'ffaker', :group => :test
