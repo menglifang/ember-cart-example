@@ -46,3 +46,4 @@ end
 
 gem 'ember-cart', git: 'https://github.com/ichid/ember-cart.git', branch: 'develop'
 gem 'ancestry'
+gem 'heroku'
