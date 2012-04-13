@@ -37,7 +37,6 @@ gem 'ember-rails', git: 'https://github.com/emberjs/ember-rails.git'
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'ffaker'
 end
 gem "simple_form"
 group :assets do
@@ -48,5 +47,6 @@ gem 'ember-cart', git: 'https://github.com/ichid/ember-cart.git', branch: 'devel
 gem 'ancestry'
 gem 'heroku'
 gem 'slim'
+gem 'ffaker'
 #gem 'sqlite3'
 gem 'pg'
