@@ -6,6 +6,7 @@
 
     parent = category.products.create(
       name: Faker::Product.product_name,
+      price: rand(100) + 1,
       group: group
     )
     
