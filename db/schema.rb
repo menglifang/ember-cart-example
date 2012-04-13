@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(:version => 20120413093712) do
   create_table "products", :force => true do |t|
     t.string   "name"
     t.decimal  "price",               :precision => 8, :scale => 2
-    t.integer  "quantity"
     t.string   "group"
     t.string   "ancestry"
     t.integer  "product_category_id"
