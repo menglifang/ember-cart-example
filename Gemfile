@@ -39,7 +39,6 @@ gem 'jquery-rails'
 
 gem "rspec-rails", :group => [:development, :test]
 gem "simple_form"
-gem "sqlite3", :group => [:development, :test]
 group :assets do
   gem "twitter-bootstrap-rails"
 end
@@ -47,3 +46,4 @@ end
 gem 'ember-cart', git: 'https://github.com/ichid/ember-cart.git', branch: 'develop'
 gem 'ancestry'
 gem 'heroku'
+gem 'pg'
