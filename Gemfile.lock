@@ -1,6 +1,13 @@
 GIT
+  remote: git://github.com/josevalim/active_model_serializers.git
+  revision: 93d0cb51173c5ac16aa767659f4f8f8d53a207dd
+  specs:
+    active_model_serializers (0.1.0)
+      activemodel (~> 3.0)
+
+GIT
   remote: https://github.com/emberjs/ember-rails.git
-  revision: 5d805e705bfd145fcee520170319d63e27dceef6
+  revision: 202c360f23b80222c9af717ed2dcbde481acdbda
   specs:
     ember-rails (0.3.0)
       execjs (>= 1.2)
@@ -8,7 +15,7 @@ GIT
 
 GIT
   remote: https://github.com/ichid/ember-cart.git
-  revision: e1c5eb6b7a158239684e27f66b77572d706f38dd
+  revision: e7b092e6399fbd7ffd7c97774360cdd4a38fa080
   branch: develop
   specs:
     ember-cart (0.0.1)
@@ -176,6 +183,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers!
   ancestry
   coffee-rails (~> 3.2.1)
   ember-cart!
