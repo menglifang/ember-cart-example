@@ -15,7 +15,7 @@ GIT
 
 GIT
   remote: https://github.com/ichid/ember-cart.git
-  revision: 766fa037e53d9374466a263884f9220c3a90c671
+  revision: f84fc152c8cdd63647fd6c0ad990aac26817ebe6
   branch: develop
   specs:
     ember-cart (0.0.1)
