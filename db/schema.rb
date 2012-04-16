@@ -11,7 +11,38 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120413093712) do
+ActiveRecord::Schema.define(:version => 20120414064417) do
+
+  create_table "ember_cart_cart_items", :force => true do |t|
+    t.integer  "cartable_id"
+    t.string   "cartable_type"
+    t.integer  "cart_id"
+    t.string   "name"
+    t.decimal  "price",         :precision => 10, :scale => 2
+    t.integer  "quantity"
+    t.integer  "base_quantity"
+    t.string   "group"
+    t.integer  "parent_id"
+    t.datetime "created_at",                                   :null => false
+    t.datetime "updated_at",                                   :null => false
+  end
+
+  add_index "ember_cart_cart_items", ["cart_id"], :name => "index_ember_cart_cart_items_on_cart_id"
+  add_index "ember_cart_cart_items", ["cartable_id"], :name => "index_ember_cart_cart_items_on_cartable_id"
+  add_index "ember_cart_cart_items", ["cartable_type"], :name => "index_ember_cart_cart_items_on_cartable_type"
+  add_index "ember_cart_cart_items", ["name"], :name => "index_ember_cart_cart_items_on_name"
+  add_index "ember_cart_cart_items", ["parent_id"], :name => "index_ember_cart_cart_items_on_parent_id"
+
+  create_table "ember_cart_carts", :force => true do |t|
+    t.string   "name"
+    t.integer  "shopper_id"
+    t.string   "shopper_type"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "ember_cart_carts", ["shopper_id"], :name => "index_ember_cart_carts_on_shopper_id"
+  add_index "ember_cart_carts", ["shopper_type"], :name => "index_ember_cart_carts_on_shopper_type"
 
   create_table "product_categories", :force => true do |t|
     t.string   "name"
