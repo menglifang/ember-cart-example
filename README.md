@@ -1,7 +1,7 @@
 # ReadMe
 
-ember-cart-example has an [online
-version](http://simple-lightning-5498.herokuapp.com). 
+ember-cart-example has an [Online
+Demo](http://ember-cart-example.herokuapp.com). 
 
 *NOTE* It hasn't finished yet.
 
