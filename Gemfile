@@ -18,8 +18,6 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'ember-rails', git: 'https://github.com/emberjs/ember-rails.git'
-gem "active_model_serializers", :git => "git://github.com/josevalim/active_model_serializers.git"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -44,6 +42,8 @@ group :assets do
   gem "twitter-bootstrap-rails"
 end
 
+gem 'ember-rails', git: 'https://github.com/emberjs/ember-rails.git'
+gem "active_model_serializers", :git => "git://github.com/josevalim/active_model_serializers.git"
 gem 'ember-cart', git: 'https://github.com/ichid/ember-cart.git', branch: 'develop'
 gem 'ancestry'
 gem 'heroku'
@@ -51,3 +51,4 @@ gem 'slim'
 gem 'ffaker'
 #gem 'sqlite3'
 gem 'pg'
+gem 'rda'
