@@ -12,6 +12,7 @@ html lang="en"
     link href="images/apple-touch-icon.png" rel="apple-touch-icon"
     link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"
     link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"
+    = javascript_include_tag "application"
   body
     .navbar.navbar-fixed-top
       .navbar-inner
@@ -22,10 +23,9 @@ html lang="en"
             span.icon-bar
           a.brand href="#" EmberCartExample
           .container-fluid.nav-collapse
-            ul.nav
-              li= link_to "Link1", "/path1"
-              li= link_to "Link2", "/path2"
-              li= link_to "Link3", "/path3"
+            ul.nav.pull-right
+              li id="ember-cart"
+                script type="text/x-handlebars" {{view EmberCart.MiniCartBar}}
           /! /.nav-collapse
     .container-fluid
       - flash.each do |name, msg|
@@ -38,7 +38,7 @@ html lang="en"
             ul.nav.nav-list
               li.nav-header Product Categories
               - ProductCategory.all.each do |c|
-                li class="#{@product_category.name == c.name ? 'active' : '' if @product_category}"= link_to c.name, product_category_products_path(c)
+                li class="#{@product_category.name == c.name ? 'active' : '' if @product_category}"= link_to c.name.capitalize, product_category_products_path(c)
           /! /.well
         /! /span
         .span9
@@ -48,9 +48,3 @@ html lang="en"
       /! /row
       footer
         p &copy; 2011-2012 Beijing Menglifang Network Science and Technology Co.,Ltd.
-    /! /container
-    /!
-      | Javascripts
-      | \==================================================
-    /! Placed at the end of the document so the pages load faster
-    = javascript_include_tag "application"

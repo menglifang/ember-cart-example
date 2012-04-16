@@ -2,11 +2,35 @@
   div.row
     - @products[(i * 3)..((i + 1) * 3 - 1)].each do |p, i|
       div.span4
-        h3= p.name
+        p: h3= p.name
         p= "Price: #{number_to_currency(p.price)}"
-        ul
-          - p.children.each do |c|
-            li
-              h4= "#{c.name} (#{number_to_currency(c.price)})"
-        p
-          a.btn.btn-danger.btn-large Add to cart
+        p: a.btn.btn-danger.btn-large.add-to-cart data-product="#{ ProductSerializer.new(p).as_json[:product].to_json.gsub(/"/, "\"") }" Add to cart
+        - if p.has_children?
+          p: h4 Composed of:
+          ul
+            - p.children.each do |c|
+              li= "#{c.name} (#{number_to_currency(c.price)})"
+
+coffee:
+  jQuery ->
+    jQuery('a.add-to-cart').click ->
+      product = $(this).data().product
+
+      cartItemAttrs =
+        cartable_type: 'Product'
+        cartable_id: product.id
+        name: product.name
+        price: product.price
+        quantity: 1
+        children: []
+
+      cartItemAttrs.children.push(
+        cartable_type: 'Product'
+        cartable_id: c.id
+        name: c.name
+        price: c.price
+        quantity: 1
+        children: []
+      ) for c in product.children
+
+      EmberCart.cartsController.addCartItem cartItemAttrs
