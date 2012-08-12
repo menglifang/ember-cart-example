@@ -42,7 +42,7 @@ group :assets do
   gem "twitter-bootstrap-rails"
 end
 
-gem 'ember-rails', git: 'https://github.com/emberjs/ember-rails.git'
+gem 'ember-rails'
 gem "active_model_serializers", :git => "git://github.com/josevalim/active_model_serializers.git"
 gem 'ember-cart', git: 'git://github.com/ichid/ember-cart.git', branch: 'develop'
 gem 'ancestry'
