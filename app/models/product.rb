@@ -1,5 +1,6 @@
 class Product < ActiveRecord::Base
   has_ancestry
+  acts_as_cartable
 
   belongs_to :product_category
 
