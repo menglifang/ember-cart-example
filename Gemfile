@@ -1,6 +1,6 @@
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
 
-gem 'rails', '3.2.3'
+gem 'rails', '~> 3.2.3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -44,7 +44,7 @@ end
 
 gem 'ember-rails', git: 'https://github.com/emberjs/ember-rails.git'
 gem "active_model_serializers", :git => "git://github.com/josevalim/active_model_serializers.git"
-gem 'ember-cart', git: 'https://github.com/ichid/ember-cart.git', branch: 'develop'
+gem 'ember-cart', git: 'git://github.com/ichid/ember-cart.git', branch: 'develop'
 gem 'ancestry'
 gem 'heroku'
 gem 'slim'
